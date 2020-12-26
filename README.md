@@ -1,37 +1,45 @@
-## Welcome to GitHub Pages
+# 远方归来的游子，连接到实验室服务器
 
-You can use the [editor on GitHub](https://github.com/m2kar/go/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+## 连接命令
+### 连接实验室服务器
+```bash
+ssh -vNC -L 13389:192.168.7.215:3389 -p 5022 -i id_go zhiqing@isrc.iscas.ac.cn
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Tools
+### Mac, Linux
 
-### Jekyll Themes
+使用自带的SSH.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/m2kar/go/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+需要下载RDP支持。
 
-### Support or Contact
+### Windows
+ 下载Git Bash。
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- 【官方】：https://git-scm.com/downloads
+- 【镜像】：https://npm.taobao.org/mirrors/git-for-windows/
+
+下载最新版的`PortableGit`
+
+## 密钥
+
+外部使用专用密钥，使用了PassPhrase加密。
+
+### `id_go`
+
+```raw
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABBuZkIT1i
+uLxu/joZNQBfVDAAAAEAAAAAEAAABoAAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlz
+dHAyNTYAAABBBKh3yyMhc2/6bO0ndoqYYLSsRRpEMT0j5GbWmET8zaygjX53kLI1yQam0Y
+9VEAdVOD/YmagL3VDbe+/IuxPFV18AAACw3qBq27uUqQDjjW49H4Nr2SLTMttPvlsz+uZw
+JQbcgGJbf4vWiuUGFMVle1Op+C+v9jzFRpSWuTdOiOS/BxpHnV2BFxskvCk+h3BOmJf/H2
+W5yz/7prrTp3g8ffuXTBkkp83BdvMFDx9wlYbhOtfN1xK4NfaE+STBGC2O4t6zCswh385a
+5j4/Ctdi7lnX+nYzTtXxl4USmfAgEuqxa0O7omPjwQpg1sNK/0RpAnlyMI4=
+-----END OPENSSH PRIVATE KEY-----
+```
+
+### `id_go.pub`
+```raw
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKh3yyMhc2/6bO0ndoqYYLSsRRpEMT0j5GbWmET8zaygjX53kLI1yQam0Y9VEAdVOD/YmagL3VDbe+/IuxPFV18= zhiqing@go
+```
