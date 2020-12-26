@@ -5,7 +5,10 @@
 ```bash
 ssh -vNC -L 13389:192.168.7.215:3389 -p 5022 -i id_go zhiqing@isrc.iscas.ac.cn
 ```
-
+### 连接到主机
+```
+rdp://localhost:13389
+```
 ## Tools
 ### Mac, Linux
 
