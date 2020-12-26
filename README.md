@@ -1,5 +1,5 @@
 # 远方归来的游子，连接到实验室服务器
-【本页地址】: https://m2kar.cn/go
+【本页地址】: [https://m2kar.cn/go](https://m2kar.cn/go)
 ## 连接命令
 ### 连接实验室服务器
 ```bash
@@ -19,8 +19,8 @@ rdp://localhost:13389
 ### Windows
  下载Git Bash。
 
-- 【官方】：https://git-scm.com/downloads
-- 【镜像】：https://npm.taobao.org/mirrors/git-for-windows/
+- 【官方】：[https://git-scm.com/downloads](https://git-scm.com/downloads)
+- 【镜像】：[https://npm.taobao.org/mirrors/git-for-windows/](https://npm.taobao.org/mirrors/git-for-windows/)
 
 下载最新版的`PortableGit`
 
