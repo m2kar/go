@@ -15,6 +15,10 @@ rdp://localhost:13389
 使用自带的SSH.
 
 需要下载RDP支持。
+#### Yum
+```
+sudo yum install remmina
+```
 
 ### Windows
  下载Git Bash。
