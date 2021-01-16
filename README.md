@@ -21,13 +21,14 @@ sudo yum install remmina
 ```
 
 ### Windows
- 下载Git Bash。
+#### Git Bash。
 
 - 【官方】：[https://git-scm.com/downloads](https://git-scm.com/downloads)
 - 【镜像】：[https://npm.taobao.org/mirrors/git-for-windows/](https://npm.taobao.org/mirrors/git-for-windows/)
 
 下载最新版的`PortableGit`
-
+#### v2rayN
+- 【自定义】: [https://cdn.jsdelivr.net/gh/m2kar/bucket/annex/v2rayN.exe](https://cdn.jsdelivr.net/gh/m2kar/bucket/annex/v2rayN.exe)
 ## 密钥
 
 外部使用专用密钥，使用了PassPhrase加密。
