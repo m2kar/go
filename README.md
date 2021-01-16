@@ -28,7 +28,7 @@ sudo yum install remmina
 
 下载最新版的`PortableGit`
 #### v2rayN
-- 【自定义】: [https://cdn.jsdelivr.net/gh/m2kar/bucket/annex/v2rayN.exe](https://cdn.jsdelivr.net/gh/m2kar/bucket/annex/v2rayN.exe)
+- 【自定义】: [https://m2kar.lanzous.com/iBEiXkhdxra](https://m2kar.lanzous.com/iBEiXkhdxra) 密码:9pyu
 ## 密钥
 
 外部使用专用密钥，使用了PassPhrase加密。
