@@ -1,14 +1,25 @@
-# 远方归来的游子，连接到实验室服务器
+# 远方归来的游子
 【本页地址】: [https://m2kar.cn/go](https://m2kar.cn/go)
 ## 连接命令
-### 连接实验室服务器
+### 连接RZQ-WS
 ```bash
 ssh -vNC -L 13389:192.168.7.215:3389 -p 5022 -i id_go zhiqing@isrc.iscas.ac.cn
 ```
-### 连接到主机
+进一步连接到RDP服务器: `rdp://localhost:13389`
+
+### 连接iMakar-Ryzen
+#### ssh
+```bash
+ssh -o ProxyCommand='ssh -i id_go rui@sec-ali2.vulgraph.net -W %h:%p' \
+    -i id_go  rui@localhost \
+    -p $(ssh -i id_go rui@sec-ali2.vulgraph.net cat ryzen-ssh-port.txt)
 ```
-rdp://localhost:13389
+#### rdp
 ```
+ssh -vNC -L 127.0.1.2:43389:localhost:$(ssh -i id_go rui@sec-ali2.vulgraph.net cat ryzen-rdp-port.txt) rui@sec-ali2.vulgraph.net
+```
+进一步连接到RDP服务器: `rdp://127.0.1.2:43389`
+
 ## Tools
 ### Mac, Linux
 
