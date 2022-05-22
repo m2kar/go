@@ -3,20 +3,20 @@
 ## 连接命令
 ### 连接RZQ-WS
 ```bash
-ssh -vNC -L 13389:192.168.7.215:3389 -p 5022 -i id_go zhiqing@isrc.iscas.ac.cn
+ssh -vNC -L 13389:192.168.7.215:3389 -p 5022 -i id_go.pub zhiqing@isrc.iscas.ac.cn
 ```
 进一步连接到RDP服务器: `rdp://localhost:13389`
 
 ### 连接iMakar-Ryzen
 #### ssh
 ```bash
-ssh -o ProxyCommand='ssh -i id_go rui@sec-ali2.vulgraph.net -W %h:%p' \
-    -i id_go  rui@localhost \
-    -p $(ssh -i id_go rui@sec-ali2.vulgraph.net cat ryzen-ssh-port.txt)
+ssh -o ProxyCommand='ssh -i id_go.pub rui@sec-ali2.vulgraph.net -W %h:%p' \
+    -i id_go.pub  rui@localhost \
+    -p $(ssh -i id_go.pub rui@sec-ali2.vulgraph.net cat ryzen-ssh-port.txt)
 ```
 #### rdp
 ```
-ssh -vNC -L 127.0.1.2:43389:localhost:$(ssh -i id_go rui@sec-ali2.vulgraph.net cat ryzen-rdp-port.txt) rui@sec-ali2.vulgraph.net
+ssh -vNC -L 127.0.1.2:43389:localhost:$(ssh -i id_go.pub rui@sec-ali2.vulgraph.net cat ryzen-rdp-port.txt) rui@sec-ali2.vulgraph.net
 ```
 进一步连接到RDP服务器: `rdp://127.0.1.2:43389`
 
@@ -47,7 +47,7 @@ sudo yum install remmina
 ### `id_go`
 
 ```
-echo LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQ21GbGN6STFOaTFqZEhJQUFBQUdZbU55ZVhCMEFBQUFHQUFBQUJCdVprSVQxaQp1THh1L2pvWk5RQmZWREFBQUFFQUFBQUFFQUFBQm9BQUFBRTJWalpITmhMWE5vWVRJdGJtbHpkSEF5TlRZQUFBQUlibWx6CmRIQXlOVFlBQUFCQkJLaDN5eU1oYzIvNmJPMG5kb3FZWUxTc1JScEVNVDBqNUdiV21FVDh6YXlnalg1M2tMSTF5UWFtMFkKOVZFQWRWT0QvWW1hZ0wzVkRiZSsvSXV4UEZWMThBQUFDdzNxQnEyN3VVcVFEampXNDlINE5yMlNMVE10dFB2bHN6K3VadwpKUWJjZ0dKYmY0dldpdVVHRk1WbGUxT3ArQyt2OWp6RlJwU1d1VGRPaU9TL0J4cEhuVjJCRnhza3ZDaytoM0JPbUpmL0gyClc1eXovN3ByclRwM2c4ZmZ1WFRCa2twODNCZHZNRkR4OXdsWWJoT3RmTjF4SzROZmFFK1NUQkdDMk80dDZ6Q3N3aDM4NWEKNWo0L0N0ZGk3bG5YK25ZelR0WHhsNFVTbWZBZ0V1cXhhME83b21QandRcGcxc05LLzBScEFubHlNSTQ9Ci0tLS0tRU5EIE9QRU5TU0ggUFJJVkFURSBLRVktLS0tLQo= | base64 -d > id_go && chmod g-rwx,o-rwx id_go
+echo LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQ21GbGN6STFOaTFqZEhJQUFBQUdZbU55ZVhCMEFBQUFHQUFBQUJCdVprSVQxaQp1THh1L2pvWk5RQmZWREFBQUFFQUFBQUFFQUFBQm9BQUFBRTJWalpITmhMWE5vWVRJdGJtbHpkSEF5TlRZQUFBQUlibWx6CmRIQXlOVFlBQUFCQkJLaDN5eU1oYzIvNmJPMG5kb3FZWUxTc1JScEVNVDBqNUdiV21FVDh6YXlnalg1M2tMSTF5UWFtMFkKOVZFQWRWT0QvWW1hZ0wzVkRiZSsvSXV4UEZWMThBQUFDdzNxQnEyN3VVcVFEampXNDlINE5yMlNMVE10dFB2bHN6K3VadwpKUWJjZ0dKYmY0dldpdVVHRk1WbGUxT3ArQyt2OWp6RlJwU1d1VGRPaU9TL0J4cEhuVjJCRnhza3ZDaytoM0JPbUpmL0gyClc1eXovN3ByclRwM2c4ZmZ1WFRCa2twODNCZHZNRkR4OXdsWWJoT3RmTjF4SzROZmFFK1NUQkdDMk80dDZ6Q3N3aDM4NWEKNWo0L0N0ZGk3bG5YK25ZelR0WHhsNFVTbWZBZ0V1cXhhME83b21QandRcGcxc05LLzBScEFubHlNSTQ9Ci0tLS0tRU5EIE9QRU5TU0ggUFJJVkFURSBLRVktLS0tLQo= | base64 -d > id_go.pub && chmod g-rwx,o-rwx id_go.pub
 ```
 
 <details>
@@ -55,7 +55,7 @@ echo LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUF
 <pre>
 <code>
 #### id_go.pub
-ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKh3yyMhc2/6bO0ndoqYYLSsRRpEMT0j5GbWmET8zaygjX53kLI1yQam0Y9VEAdVOD/YmagL3VDbe+/IuxPFV18= zhiqing@go
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKh3yyMhc2/6bO0ndoqYYLSsRRpEMT0j5GbWmET8zaygjX53kLI1yQam0Y9VEAdVOD/YmagL3VDbe+/IuxPFV18= pubkey-go
 ##### id_go
 -----BEGIN OPENSSH PRIVATE KEY-----
 b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABBuZkIT1i
