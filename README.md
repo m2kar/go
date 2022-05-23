@@ -7,7 +7,6 @@ yarn
 ## how to edit
 
 ```bash
-openssl enc -aes-256-cbc -d -in index.enc -out index.md  -pbkdf2 -pass env:GOPASSWD
 GOPASSWD="the password" ./decrypt.sh
 ```
 
