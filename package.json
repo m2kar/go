@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "markdown-to-html": "^0.0.13",
+    "staticrypt": "^2.1.1"
+  }
+}
